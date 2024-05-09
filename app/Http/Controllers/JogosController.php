@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class JogosController extends Controller
 {
-    public function store(JogosFormRequest $request)
+    public function cadastroJogos(JogosFormRequest $request)
     {
         $jogos = Jogos::create([
             'nome' => $request->nome,
@@ -19,6 +19,7 @@ class JogosController extends Controller
             'plataformas' => $request->plataformas,
             'desenvolvedor' => $request->desenvolvedor,
             'distribuidora' => $request->distribuidora,
+            'categoria' => $request->categoria
         ]);
         return response()->json([
             "status" => true,
@@ -27,7 +28,7 @@ class JogosController extends Controller
         ], 200);
     }
 
-    public function pesquisaPorId($id)
+    public function pesquisarIdJogos($id)
     {
         $jogos = Jogos::find($id);
         if ($jogos == null) {
@@ -42,7 +43,7 @@ class JogosController extends Controller
         ]);
     }
 
-    public function pesquisarPorNomeJogo(Request $request)
+    public function pesquisarNomeJogo(Request $request)
     {
         $jogos = Jogos::where('nome', 'like', '%' . $request->nome . '%')->get();
 
@@ -69,7 +70,7 @@ class JogosController extends Controller
         ]);
     }
 
-    public function atualizar(UpdateJogosFormRequest $request)
+    public function atualizarJogos(UpdateJogosFormRequest $request)
     {
         $jogos = Jogos::find($request->id);
 
@@ -117,7 +118,7 @@ class JogosController extends Controller
         ]);
     }
 
-    public function excluirJogo($id)
+    public function excluirJogos($id)
     {
         $jogos = Jogos::find($id);
 
