@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('register/games', [JogosController::class, 'cadastroJogos']);
 
-Route::get('search/games/by/{id}', [JogosController::class, 'pesquisarIdJogos']);
+Route::get('search/game/by/{id}', [JogosController::class, 'pesquisarIdJogos']);
 
-Route::post('search/games/by/nome', [JogosController::class, 'pesquisarNomeJogo']);
+Route::post('search/game/by/name', [JogosController::class, 'pesquisarNomeJogo']);
 
 Route::get('return/all/games', [JogosController::class, 'retornarTodosJogos']);
 

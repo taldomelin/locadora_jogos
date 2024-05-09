@@ -1,66 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Locadora de Jogos
+=======
+<div align= "center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Logo](https://github.com/taldomelin/locadora_jogos/blob/main/app/assets/logoJogos.png)
+</div>
 
-## About Laravel
+# Sobre o Projeto:
+A Locadora de Jogos desenvolvida por quatro alunos do SENAI é uma plataforma web que permite a locação de jogos eletrônicos de forma fácil e conveniente. O projeto foi desenvolvido com o objetivo de proporcionar uma experiência agradável aos entusiastas de jogos eletrônicos, que podem alugar títulos desejados por um período determinado, em vez de comprar.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A locadora foi construída com tecnologias modernas, como HTML, CSS, JavaScript, Node.js e Express.js, e armazena os dados dos jogos e clientes em uma base de dados MySQL. O site é intuitivo e fácil de usar, permitindo que os usuários pesquisem e filtrem jogos por categorias, plataformas e preços.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Além disso, a Locadora de Jogos oferece um sistema de login e cadastro, permitindo que os usuários gerenciem suas contas, vejam o histórico de aluguéis e recebam recomendações personalizadas. O sistema também inclui um painel de controle para os administradores, onde podem gerenciar os jogos, clientes e pedidos de aluguel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A Locadora de Jogos desenvolvida por quatro alunos do SENAI é um exemplo notável de como a tecnologia pode ser usada para criar soluções inovadoras e úteis. Com sua interface amigável e recursos avançados, a locadora tem o potencial de se tornar uma opção popular para os amantes de jogos eletrônicos.
 
-## Learning Laravel
+## Como utilizar este repositório
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
+```
+ git clone https://github.com/taldomelin/locadora_jogos.git
+```
+2. Acesse o diretório do projeto:
+```
+cd locadora_jogos
+```
+3. Inicializando o Repositorio
+```
+composer update
+```
+4. Copiando o env. do exemplo
+```
+copy .env.example .env
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. Acessar o Visual Studio Code
+```
+code .
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+##Insomnia
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=locadora_jogos&uri=https%3A%2F%2Fraw.githubusercontent.com%2Ftaldomelin%2Flocadora_jogos%2Fmain%2FInsomnia-All_2024-05-09.json)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Licença
 
-### Premium Partners
+Este projeto está licenciado sob a [MIT License](LICENSE), o que significa que você pode utilizá-lo livremente para fins educacionais, comerciais ou pessoais.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Contato
+Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: gumelo.cant@gmail.com
 
-## Contributing
+**Aviso**: Certifique-se de substituir "casagrande7" no link de clonagem e "gumelo.cant@gmail.com" na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Este é apenas um modelo básico de README.md, você pode adaptar e melhorar conforme suas necessidades específicas de projeto. Certifique-se de incluir informações importantes sobre como configurar, executar e testar os exercícios, bem como qualquer outra documentação relevante para tornar o repositório mais amigável e útil para outros desenvolvedores.
