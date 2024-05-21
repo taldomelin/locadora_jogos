@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Jogos;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,70 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $descriptions = [
-            'É um jogo incrível com gráficos e jogabilidade fantásticos.',
-            'Um imprescindível para fãs do gênero.',
-            'Uma aventura épica que vai mantê-lo na beira da cadeira.',
-            'Um jogo único e inovador que estica os limites da mídia.',
-            'Um jogo divertido e adictivo que não conseguirá largar.' 
-        ];
-
-        $classifications = [
-            '12+',
-            '16+',
-            '18+',
-            'Livre',
-        ];
-
-        $platforms = [
-            'PC',
-            'PS5',
-            'Xbox',
-            'Nintendo Switch',
-            'iOS',
-            'Android',
-        ];
-
-        $developers = [
-            'Desenvolvedor 1',
-            'Desenvolvedor 2',
-            'Desenvolvedor 3',
-            'Desenvolvedor 4',
-            'Desenvolvedor 5',
-        ];
-
-        $distributors = [
-            'Distribuidor 1',
-            'Distribuidor 2',
-            'Distribuidor 3',
-            'Distribuidor 4',
-            'Distribuidor 5',
-        ];
-
-        $categories = [
-            'Ação',
-            'Aventura',
-            'RP',
-            'Estratégia',
-            'Simulação',
-            'Esporte',
-            'Puzzle',
-            'Console',
-            'Luta',
-            'Tiro',
-        ];
-
-        for ($i = 0; $i < 100; $i++) {
-            Jogos::create([
-                'nome' => 'Game ' . $i,
-                'preco' => rand(19.99, 99.99),
-                'descricao' => $descriptions[array_rand($descriptions)],
-                'classificacao' => $classifications[array_rand($classifications)],
-                'plataformas' => implode(', ', array_rand($platforms, rand(1, count($platforms)))),
-                'desenvolvedor' => $developers[array_rand($developers)],
-                'distribuidora' => $distributors[array_rand($distributors)],
-                'categoria' => $categories[array_rand($categories)],
-            ]);
-        }
+        $this->call([
+            JogosSeeder::class
+        ]);
     }
 }

@@ -47,6 +47,7 @@ class UpdateJogosFormRequest extends FormRequest
         return [
             'nome.max' => 'O campo Nome deve conter no máximo 120 caracteres',
             'nome.min' => 'O campo Nome deve conter no mínimo 5 caracteres',
+            'nome.unique' => 'Nome já cadastrado no sistema',
             'preco.decimal' => 'O campo Preço deve conter apenas valores em decimais',
             'descricao.max' => 'O campo Descrição deve conter no máximo 800 caracteres',
             'descricao.min' => 'O campo Descriçaõ deve conter no mínimo 10 caracteres',

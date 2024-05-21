@@ -67,7 +67,7 @@ class JogosSeeder extends Seeder
             'Luta',
             'Tiro',
         ];
-        for ($i = 0; $i < 999 ; $i++) {
+        for ($i = 0; $i < 200; $i++) {
             $numberOfPlatforms = rand(1, count($platforms));
             $randomPlatforms = array_rand($platforms, $numberOfPlatforms);
             $randomPlatforms = is_array($randomPlatforms) ? $randomPlatforms : [$randomPlatforms];
@@ -75,7 +75,7 @@ class JogosSeeder extends Seeder
                 return $platforms[$index];
             }, $randomPlatforms);
             Jogos::create([
-                'nome' => 'Game ' . $i,
+                'nome' => 'Jogo ' . $i,
                 'preco' => rand(19.99, 99.99),
                 'descricao' => $descriptions[array_rand($descriptions)],
                 'classificacao' => $classifications[array_rand($classifications)],
