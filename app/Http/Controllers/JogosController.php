@@ -46,9 +46,7 @@ class JogosController extends Controller
     public function pesquisarNomeJogo(Request $request)
     {
         $jogos = Jogos::where('nome', 'like', '%' . $request->nome . '%')->get();
-
         if (count($jogos) > 0) {
-
             return response()->json([
                 'status' => true,
                 'data' => $jogos
@@ -63,17 +61,22 @@ class JogosController extends Controller
     public function retornarTodosJogos()
     {
         $jogos = Jogos::all();
-
-        return response()->json([
-            'status' => true,
-            'data' => $jogos
-        ]);
-    }
+        if ($jogos->count() > 0) {
+            return response()->json([
+                'status' => true,
+                'data' => $jogos
+            ]);
+        } else {
+            return response()->json([
+                'status' => false,
+                'data' => "Nenhum jogo registrado"
+            ]);
+        }
+}
 
     public function atualizarJogos(UpdateJogosFormRequest $request)
     {
         $jogos = Jogos::find($request->id);
-
         if (!isset($jogos)) {
             return response()->json([
                 'status' => false,
@@ -83,31 +86,24 @@ class JogosController extends Controller
         if (isset($request->nome)) {
             $jogos->nome = $request->nome;
         }
-
         if (isset($request->preco)) {
             $jogos->preco = $request->preco;
         }
-
         if (isset($request->descricao)) {
             $jogos->descricao = $request->descricao;
         }
-
         if (isset($request->classificacao)) {
             $jogos->classificacao = $request->classificacao;
         }
-
         if (isset($request->plataformas)) {
             $jogos->plataformas = $request->plataformas;
         }
-
         if (isset($request->desenvolvedor)) {
             $jogos->desenvolvedor = $request->desenvolvedor;
         }
-
         if (isset($request->distribuidora)) {
             $jogos->distribuidora = $request->distribuidora;
         }
-
         if (isset($request->categoria)) {
             $jogos->categoria = $request->categoria;
         }
@@ -121,14 +117,12 @@ class JogosController extends Controller
     public function excluirJogos($id)
     {
         $jogos = Jogos::find($id);
-
         if (!isset($jogos)) {
             return response()->json([
                 'status' => false,
                 'message' => "Jogo não encontrado"
             ]);
         }
-
         $jogos->delete();
         return response()->json([
             'status' => true,
@@ -136,4 +130,20 @@ class JogosController extends Controller
         ]);
     }
 
+    public function checarUnico(Request $request)
+    {
+        $nome = $request->nome;
+        $jogos = Jogos::where('nome', $nome)->first();
+        if ($jogos) {
+            return response()->json([
+                'status' => false,
+                'message' => "Jogo com nome '$nome' já existe"
+            ]);
+        } else {
+            return response()->json([
+                'status' => true,
+                'message' => "Nome '$nome' está disponível"
+            ]);
+        }
+    }
 }
