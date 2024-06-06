@@ -137,12 +137,12 @@ class JogosController extends Controller
         if ($jogos) {
             return response()->json([
                 'status' => false,
-                'message' => "Jogo com nome '$nome' já existe"
+                'message' => "Nome: '$nome' já cadastrado no sistema"
             ]);
         } else {
             return response()->json([
                 'status' => true,
-                'message' => "Nome '$nome' está disponível"
+                'message' => "Nome: '$nome' está disponível"
             ]);
         }
     }
